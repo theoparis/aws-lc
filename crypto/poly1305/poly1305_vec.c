@@ -29,11 +29,11 @@
 
 typedef __m128i xmmi;
 
-static const uint32_t alignas(16) poly1305_x64_sse2_message_mask[4] = {
-    (1 << 26) - 1, 0, (1 << 26) - 1, 0};
-static const uint32_t alignas(16) poly1305_x64_sse2_5[4] = {5, 0, 5, 0};
-static const uint32_t alignas(16) poly1305_x64_sse2_1shl128[4] = {(1 << 24), 0,
-                                                                  (1 << 24), 0};
+static const uint32_t poly1305_x64_sse2_message_mask[4] = {(1 << 26) - 1, 0,
+                                                           (1 << 26) - 1, 0};
+static const uint32_t poly1305_x64_sse2_5[4] = {5, 0, 5, 0};
+static const uint32_t poly1305_x64_sse2_1shl128[4] = {(1 << 24), 0, (1 << 24),
+                                                      0};
 
 static inline uint128_t add128(uint128_t a, uint128_t b) { return a + b; }
 
